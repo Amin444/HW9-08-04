@@ -7,21 +7,28 @@ namespace HW9_08_04
         static void Main(string[] args)
         {
 
-
+            
             string[] z = { "Amin", "task", "House" };
             foreach (var item in z)
             {
                 System.Console.WriteLine(item);
             }
-
-
             ArrayHelper.Pop(ref z);
-            
-            System.Console.WriteLine("Deleted Pop");
+             
+            System.Console.WriteLine("-------Deleted Pop---------");
             foreach (var item in z)
             {
                 System.Console.WriteLine(item);
             }
+                ////////////////////////////////////////////
+          System.Console.WriteLine("-------Anouther point!--------");
+            string[] a={"Alif","Loptop","Academy"};
+            ArrayHelper.Push(ref a,"Avengers");
+                foreach (var resilt in a)
+                {
+                 System.Console.WriteLine(resilt);   
+                }
+
             Console.ReadKey();
         }
     }
@@ -82,6 +89,67 @@ namespace HW9_08_04
             ar = nar;
             return end;
         }
-        
+        static public void Push(ref string[]  a, string add)
+        {
+               string[] nadd=new string[a.Length+1];
+               for (int i = 0; i < a.Length; i++)
+               {
+                   nadd[i]=a[i];
+
+               }
+               nadd[nadd.Length-1]=add;
+               a=nadd;
+
+        }
+         static public void Push(ref double[]  a, double add)
+        {
+               double[] nadd=new double[a.Length+1];
+               for (int i = 0; i < a.Length; i++)
+               {
+                   nadd[i]=a[i];
+
+               }
+               nadd[nadd.Length-1]=add;
+               a=nadd;
+
+            
+        }
+
+         static public void Push(ref int[]  a, int add)
+        {
+               int[] nadd=new int[a.Length+1];
+               for (int i = 0; i < a.Length; i++)
+               {
+                   nadd[i]=a[i];
+
+               }
+               nadd[nadd.Length-1]=add;
+               a=nadd;
+        }
+             static public void Push(ref decimal[]  a, decimal add)
+        {
+               decimal[] nadd=new decimal[a.Length+1];
+               for (int i = 0; i < a.Length; i++)
+               {
+                   nadd[i]=a[i];
+
+               }
+               nadd[nadd.Length-1]=add;
+               a=nadd;
+        }
+
+                  static public void Push(ref float[]  a, float add)
+        {
+               float[] nadd=new float[a.Length+1];
+               for (int i = 0; i < a.Length; i++)
+               {
+                   nadd[i]=a[i];
+
+               }
+               nadd[nadd.Length-1]=add;
+               a=nadd;
+        }
+
     }
+
 }
