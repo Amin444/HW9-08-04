@@ -4,7 +4,7 @@ namespace HW9_08_04
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
 
             
@@ -28,6 +28,16 @@ namespace HW9_08_04
                 {
                  System.Console.WriteLine(resilt);   
                 }
+
+                    ////////////////////////////////////////////////
+                
+                  int ret = ArrayHelper.Shift(ref i);
+                  foreach (var g in i)
+            {
+                System.Console.WriteLine(g);
+            }
+            System.Console.WriteLine($"deleted {ret}");
+
 
             Console.ReadKey();
         }
@@ -148,7 +158,22 @@ namespace HW9_08_04
                }
                nadd[nadd.Length-1]=add;
                a=nadd;
+              
+        } 
+             
+        public static string Shift( ref string[] s)
+        {
+            string[] del=new string[s.Length-1];
+            for (int i = 0; i < del.Length; i++)
+            {
+                  del[i]=s[i+1];
+            }
+                string ret=s[0];
+                s=del;
+            return ret;
         }
+              
+
 
     }
 
