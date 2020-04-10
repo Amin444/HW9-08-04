@@ -38,11 +38,11 @@ namespace HW9_08_04
             }
             System.Console.WriteLine($"deleted {ret}");
 
-
-             ArrayHelper.UnShift(ref a, 8);
-            foreach (var z in a)
+                 int[] ds = {1,7,5,9 };
+             ArrayHelper.UnShift(ref ds, 3);
+            foreach (var wow in ds)
             {
-                System.Console.WriteLine(z);
+                System.Console.WriteLine(wow);
             }
 
             Console.ReadKey();
